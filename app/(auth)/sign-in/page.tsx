@@ -14,7 +14,8 @@ import {
   FieldGroup,
   FieldSet,
 } from "@/components/ui/field";
-import { GithubSignInForm } from '@/features/auth/components/github-sign-in-form';
+import logo from "@/public/logo.png";
+import { GitHubSignInForm } from '@/features/auth/components/github-sign-in-form';
 
 export const metadata: Metadata = {
   title: "Sign in",
@@ -32,7 +33,7 @@ const SigninPage = async ({searchParams}: SignInPageProps) => {
       <CardHeader className="items-center text-center">
         <div className="mb-6 flex justify-center pt-2">
           <Image
-            src="/logo2.svg"
+            src={logo}
             alt="Chai AI Code Reviewer"
             width={172}
             height={172}
@@ -49,7 +50,7 @@ const SigninPage = async ({searchParams}: SignInPageProps) => {
         <FieldSet>
           <FieldGroup>
             <Field>
-              <GithubSignInForm callbackUrl={callbackUrl} />
+              <GitHubSignInForm callbackUrl={callbackUrl} />
               <FieldDescription className="text-center">
                 We only request the permissions needed to identify your
                 account. You can revoke access anytime from GitHub settings.
