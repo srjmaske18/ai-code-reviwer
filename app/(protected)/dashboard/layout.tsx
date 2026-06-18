@@ -1,5 +1,5 @@
 
-import { requireAuth } from "@/features/auth/actions";
+import { requireAuth} from "@/features/auth/action"
 import { DashboardShell } from "@/features/dashboard/components/dashboard-shell";
 
 
