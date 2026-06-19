@@ -14,7 +14,7 @@ import {
   FieldGroup,
   FieldSet,
 } from "@/components/ui/field";
-import logo from "@/public/logo.png";
+import logo from "@/public/smlogo.png";
 import { GitHubSignInForm } from '@/features/auth/components/github-sign-in-form';
 
 export const metadata: Metadata = {
