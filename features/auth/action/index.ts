@@ -15,7 +15,8 @@ export async function signInWIthGithub(formData:FormData){
         body:{
             provider:"github",
             callbackURL:redirectTo
-        }
+        },
+        headers:await headers(),
     })
 
     if(result.url){
@@ -42,7 +43,7 @@ export async function requireAuth(redirectTo = SIGN_IN_PATH){
 export async function requireUnauth(redirectTo = DEFAULT_AUTH_CALLBACK){
     const session = await getServerSession();
 
-    if(!session){
+    if(session){
         redirect(redirectTo)
     }
    
